@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Moon und das Plane</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+<!-- Mixins-->
+<!-- Pen Title-->
+<div class="pen-title">
+  <h1>Moon - Plane</h1>
+</div>
+<div class="rerun">
+<div class="container">
+  <div class="card"></div>
+  <div class="card">
+      <div class="input-container">
+        <input type="number" id="lat" required="required" name="lat"/>
+        <label for="#{label}">Latitude</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="number" id="lon" required="required" name="lon"/>
+        <label for="#{label}">Longitude</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container">
+        <button onclick="document.location = 'app.php?lat='+document.getElementById('lat').value+'&lon='+document.getElementById('lon').value;"><span>Go</span></button>
+</div>
+</body>
+</html>
