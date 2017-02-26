@@ -13,6 +13,20 @@
       $obs_lon = $_GET['lon'];
       $distance = $_GET['dist'];
     }
+    else if(isset($_GET['address']) && isset($_GET['dist']))
+    {
+      $resp = $geolocation -> getGeocodeFromGoogle($_GET['address']);
+      /*echo '<pre>';
+      var_dump($resp -> results[0] -> geometry -> location);
+      echo '</pre>';*/
+      if(isset($resp -> results[0] -> geometry -> location))
+      {
+        $obs_lat = $resp -> results[0] -> geometry -> location -> lat;
+        $obs_lon = $resp -> results[0] -> geometry -> location -> lng;
+      }
+      
+      $distance = $_GET['dist'];
+    }
     else
     {
       die('ERROR CODE: 1');
